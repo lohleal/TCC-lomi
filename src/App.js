@@ -1,13 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import telaFundo from './image/telaFundo.jpg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import LoginFuncionario from './pages/LoginFuncionario';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function App() {
   return (
-    <div class="container">
-        <h2 class="titulo">Bem vindo</h2>
-    </div>
-
+    <Router>
+      <Routes>
+      <Route path="/loginFuncionario" element={<LoginFuncionario />} />
+      </Routes>
+    </Router>
   );
 }
 
