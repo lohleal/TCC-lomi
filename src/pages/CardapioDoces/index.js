@@ -1,47 +1,24 @@
-// src/pages/CardapioCafeQ.js
+// src/pages/CardapioCafeG.js
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+
 
 import { Sidebar, Logo, Menu, MenuItem } from '../../components/MenuLateral/style';
 import { Card, Imagem, Detalhes, Nome, Preco, BotaoCarrinho, Titulo, GridProdutos } from '../../components/CardProdutos/style';
-import Voltar from '../../components/BotaoVoltar';
 import Background from '../../components/Background';
+import Voltar from '../../components/BotaoVoltar';
+
+import { useLocation } from 'react-router-dom';
+
 import LinkNone from '../../components/LinkNone';
 
 
+export default function CardapioCafeG() {
 
-export default function CardapioCafeQ() {
-    // lista de produtos só para exemplo
     const produtos = [
         {
-            nome: 'Cappuccino',
-            tamanho: '200mL',
-            preco: 'R$ 15,99',
-        },
-        {
-            nome: 'Espresso',
-            tamanho: '100mL',
-            preco: 'R$ 10,00',
-        },
-        {
-            nome: 'Mocha',
-            tamanho: '200mL',
-            preco: 'R$ 18,50',
-        },
-        {
-            nome: 'Latte',
-            tamanho: '250mL',
-            preco: 'R$ 16,00',
-        },
-        {
-            nome: 'Abelhinha',
-            tamanho: '200mL',
-            preco: 'R$ 20,00',
-        },
-        {
-            nome: 'Latte',
-            tamanho: '250mL',
-            preco: 'R$ 16,00',
+            nome: 'Donuts',
+            tamanho: '50g',
+            preco: 'R$ 7,99',
         }
     ];
 
@@ -49,19 +26,16 @@ export default function CardapioCafeQ() {
     const location = useLocation();
     const nomeCliente = location.state?.nome || 'Cliente';
 
-
-
     return (
         <div style={{ display: 'flex', height: '100vh', fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}>
             <Sidebar>
                 <Logo />
                 <Menu>
-                    <MenuItem className="ativo" >CAFÉ QUENTE</MenuItem>
-
+                    <LinkNone to="/cardapio-cafeQ"><MenuItem>CAFÉ QUENTE</MenuItem></LinkNone>
                     <LinkNone to="/cardapio-cafeG"><MenuItem>CAFÉ GELADO</MenuItem></LinkNone>
                     <LinkNone to="/cardapio-bebidas"><MenuItem>BEBIDAS</MenuItem></LinkNone>
                     <LinkNone to="/cardapio-salgados"><MenuItem>SALGADOS</MenuItem></LinkNone>
-                    <LinkNone to="/cardapio-doces"><MenuItem>DOCES</MenuItem></LinkNone>
+                    <MenuItem className="ativo" >DOCES</MenuItem>
                     
                     <Voltar>
                         <a href="/cliente">Voltar</a>

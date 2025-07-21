@@ -4,8 +4,8 @@ import LayoutTotem from '../../components/LayoutTotem';
 import { InputStyled } from '../../components/InputTotem/style';
 import { Botao } from './style';
 import { Link } from 'react-router-dom';
-import { Conteudo } from './style';
-import  Background from '../../components/Background';
+import { Conteudo, ContainerBotoes } from './style';
+import Background from '../../components/Background';
 
 
 function LoginFuncionario() {
@@ -30,11 +30,21 @@ function LoginFuncionario() {
           onChange={e => setSenha(e.target.value)}
         />
 
-        <Botao onClick={() => console.log('Confirmar clicado')}>
-          <a href="/menu principal">Confirmar</a>
-        </Botao>
+        <ContainerBotoes>
 
-        <Link to="/cliente">Área do Cliente</Link>
+
+          <Botao onClick={() => console.log('Confirmar clicado')}>
+            <a href="/menu principal" style={{ textDecoration: 'none', color: 'inherit' }}>Confirmar</a>
+          </Botao>
+
+          <Botao onClick={() => console.log('Cadastrar')}>
+            <a href="/menu principal" style={{ textDecoration: 'none', color: 'inherit' }}>Cadastrar</a>
+          </Botao>
+
+          <Botao onClick={() => console.log('Confirmar clicado')}>
+            <a href="/cliente" style={{ textDecoration: 'none', color: 'inherit' }}>Área do Cliente</a>
+          </Botao>
+        </ContainerBotoes>
 
 
       </LayoutTotem>

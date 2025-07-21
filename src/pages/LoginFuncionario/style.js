@@ -4,16 +4,18 @@ import styled from 'styled-components';
 export const Botao = styled.button`
   font-size: 1rem;
   padding: 0.5rem 2rem;
-  background-color: #c4bba6;  /* Cor de fundo parecida com a da imagem */
-  border: 2px solid #5a5a49; /* Borda fina com cor escura */
-  border-radius: 20px;        /* Deixa as bordas arredondadas */
+  background-color: #c4bba6;  
+  border: 2px solid #5a5a49; 
+  border-radius: 20px;        
   color: #3d3d3d;
   font-weight: bold;
   margin-top: 30px; 
   cursor: pointer;
+  margin-bottom: 10px;
+
 
   &:hover {
-    background-color: #b0a48e; /* Cor um pouco mais escura ao passar o mouse */
+    background-color: #b0a48e;
     color: #000;
   }
 `;
@@ -32,3 +34,10 @@ export const Conteudo = styled.div`
   margin-top: 20px;
   
 `;
+
+ export const ContainerBotoes = styled.div`
+   display: flex;
+   gap: 20px; /* Espaço entre os botões */
+   justify-content: center; /* Centraliza horizontalmente */
+   margin-top: 30px;
+ `;

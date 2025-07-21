@@ -1,10 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import 'material-symbols';
 
 import LoginFuncionario from './pages/LoginFuncionario';
 import LoginCliente from './pages/LoginCliente';
 import MenuPrincipal from './pages/MenuPrincipal';
 import CardapioCafeQ from './pages/CardapioCafeQ';
 import CardapioCafeG from './pages/CardapioCafeG';
+import CardapioBebidas from './pages/CardapioBebidas';
+import CardapioDoces from './pages/CardapioDoces';
+import CardapioSalgados from './pages/CardapioSalgados';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -18,6 +22,9 @@ function App() {
       <Route path="/menu principal" element={<MenuPrincipal />} /> 
       <Route path="/cardapio-cafeQ" element={<CardapioCafeQ />} /> 
       <Route path="/cardapio-cafeG" element={<CardapioCafeG />} /> 
+      <Route path="/cardapio-bebidas" element={<CardapioBebidas />} /> 
+      <Route path="/cardapio-doces" element={<CardapioDoces />} /> 
+      <Route path="/cardapio-salgados" element={<CardapioSalgados />} /> 
       </Routes>
     </Router>
   );

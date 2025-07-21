@@ -1,14 +1,12 @@
 import styled from 'styled-components';
-import xicara from '../../image/xicara.png';
 
 export const BotaoVoltar = styled.button`
-  background: url(${xicara}) no-repeat center right;
   background-size: contain;
   border: none;
-  padding: 0.5rem 3rem 0.5rem 1rem; /* espaço para o ícone */
+  padding: 0.5rem 3rem 0.5rem 1rem; 
   font-size: 30px;
   font-weight: bold;
-  color: #3d3d3d;
+  color: #f9e8d9;
   border-radius: 20px;
   background-color: transparent;
   cursor: pointer;

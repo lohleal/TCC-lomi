@@ -2,18 +2,21 @@
 import React from 'react';
 
 
-import { Sidebar, Logo, Menu, MenuItem, BotaoVoltar } from '../../components/MenuLateral/style';
+import { Sidebar, Logo, Menu, MenuItem } from '../../components/MenuLateral/style';
 import { Card, Imagem, Detalhes, Nome, Preco, BotaoCarrinho, Titulo, GridProdutos } from '../../components/CardProdutos/style';
 import Background from '../../components/Background';
+import Voltar from '../../components/BotaoVoltar';
 
 import { useLocation } from 'react-router-dom';
 
+import LinkNone from '../../components/LinkNone';
+
 
 export default function CardapioCafeG() {
-    
+
     const produtos = [
         {
-            nome: 'Frape',
+            nome: 'Café Frappé',
             tamanho: '200mL',
             preco: 'R$ 15,99',
         }
@@ -28,12 +31,18 @@ export default function CardapioCafeG() {
             <Sidebar>
                 <Logo />
                 <Menu>
-                    <MenuItem>CAFÉ QUENTE</MenuItem>
+                    <LinkNone to="/cardapio-cafeQ"><MenuItem>CAFÉ QUENTE</MenuItem></LinkNone>
+
                     <MenuItem className="ativo" >CAFÉ GELADO</MenuItem>
-                    <MenuItem>BEBIDAS</MenuItem>
-                    <MenuItem>SALGADOS</MenuItem>
-                    <MenuItem>DOCES</MenuItem>
-                    <BotaoVoltar>Voltar</BotaoVoltar>
+
+                    <LinkNone to="/cardapio-bebidas"><MenuItem>BEBIDAS</MenuItem></LinkNone>
+                    <LinkNone to="/cardapio-salgados"><MenuItem>SALGADOS</MenuItem></LinkNone>
+                    <LinkNone to="/cardapio-doces"><MenuItem>DOCES</MenuItem></LinkNone>
+
+                    <Voltar>
+                        <a href="/cliente">Voltar</a>
+                    </Voltar>
+
                 </Menu>
             </Sidebar>
             <Background>

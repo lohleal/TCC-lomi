@@ -57,16 +57,6 @@ export const BotaoCarrinho = styled.button`
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   cursor: pointer;
 
-  .material-symbols-outlined {
-    font-size: 32px;
-    color: #3d3d3d;
-    font-variation-settings:
-      'FILL' 1,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 48;
-  }
-
   &:hover {
     background-color: #efd3b6;
   }
