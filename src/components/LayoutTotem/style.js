@@ -1,18 +1,9 @@
 // src/components/LayoutTotem/style.js
 import styled from 'styled-components';
-import fundo from '../../image/imgFundo.jpg';
+//import fundo from '../../image/imgFundo.jpg';
 import grao from '../../image/grao.jpg';
 
-export const Background = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background-image: url(${fundo});
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+
 
 export const Container = styled.div`
   display: flex;

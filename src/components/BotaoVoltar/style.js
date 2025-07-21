@@ -1,16 +1,7 @@
 import styled from 'styled-components';
 import xicara from '../../image/xicara.png';
 
-export const Conteudo = styled.div`
-  font-family: 'Georgia', serif;
-  font-size: 40px;
-  color: #5b2c06;
-  margin-top: 40px;
-  margin-bottom: 15px;
-`;
-
-
-export const BotaoXicara = styled.button`
+export const BotaoVoltar = styled.button`
   background: url(${xicara}) no-repeat center right;
   background-size: contain;
   border: none;
@@ -26,10 +17,9 @@ export const BotaoXicara = styled.button`
   gap: 0.5rem;
   position: absolute;
   bottom: 1rem;
-  right: 1rem;
+  left: 1rem;
 
   &:hover {
     opacity: 0.8;
   }
 `;
-

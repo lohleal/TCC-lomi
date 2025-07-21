@@ -3,25 +3,40 @@ import React, { useState } from 'react';
 import LayoutTotem from '../../components/LayoutTotem';
 import InputTotem from '../../components/InputTotem';
 import { Conteudo } from './style';
-import {BotaoXicara} from './style';
+import { BotaoXicara } from './style';
+import Background from '../../components/Background';
+import Voltar from '../../components/BotaoVoltar';
+
+import { useNavigate } from 'react-router-dom';
+
 
 function LoginCliente() {
     const [nome, setNome] = useState('');
+    const confirmarLogin = () => {
+        navigate('/cardapio-cafeQ', { state: { nome } });
+    };
+    const navigate = useNavigate();
 
     return (
-        <LayoutTotem titulo="Bem Vindo!!">
-            <Conteudo>Digite seu nome/apelido:</Conteudo>
-            <InputTotem
-                type="text"
-                value={nome}
-                onChange={e => setNome(e.target.value)}
-            />
+        <Background>
 
+            <LayoutTotem titulo="Bem Vindo!!">
+                <Conteudo>Digite seu nome/apelido:</Conteudo>
+                <InputTotem
+                    type="text"
+                    value={nome}
+                    onChange={e => setNome(e.target.value)}
+                />
 
-            <BotaoXicara>
-                CONFIRMAR
-            </BotaoXicara>
-        </LayoutTotem>
+                <BotaoXicara>
+                    <button onClick={confirmarLogin}>Confirmar</button>
+                </BotaoXicara>
+            </LayoutTotem>
+
+            <Voltar>
+                <a href="/">Voltar</a>
+            </Voltar>
+        </Background>
     );
 }
 

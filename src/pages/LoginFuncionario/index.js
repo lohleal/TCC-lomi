@@ -1,10 +1,11 @@
-// src/pages/LoginFuncionario/index.jsx
+// src/pages/LoginFuncionario/index.js
 import React, { useState } from 'react';
 import LayoutTotem from '../../components/LayoutTotem';
 import { InputStyled } from '../../components/InputTotem/style';
 import { Botao } from './style';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Conteudo } from './style';
+import  Background from '../../components/Background';
 
 
 function LoginFuncionario() {
@@ -12,29 +13,32 @@ function LoginFuncionario() {
   const [senha, setSenha] = useState('');
 
   return (
-    <LayoutTotem titulo="Entrar">
+    <Background>
 
-      <Conteudo>Usuário</Conteudo>
-      <InputStyled
-        value={usuario}
-        onChange={e => setUsuario(e.target.value)}
-      />
+      <LayoutTotem titulo="Entrar">
 
-      <Conteudo>Senha</Conteudo>
-      <InputStyled
-        type="password"
-        value={senha}
-        onChange={e => setSenha(e.target.value)}
-      />
+        <Conteudo>Usuário</Conteudo>
+        <InputStyled
+          value={usuario}
+          onChange={e => setUsuario(e.target.value)}
+        />
 
-      <Botao onClick={() => console.log('Confirmar clicado')}>
-        CONFIRMAR
-      </Botao>
+        <Conteudo>Senha</Conteudo>
+        <InputStyled
+          type="password"
+          value={senha}
+          onChange={e => setSenha(e.target.value)}
+        />
 
-      <Link to="/cliente">Área do Cliente</Link>
+        <Botao onClick={() => console.log('Confirmar clicado')}>
+          <a href="/menu principal">Confirmar</a>
+        </Botao>
+
+        <Link to="/cliente">Área do Cliente</Link>
 
 
-    </LayoutTotem>
+      </LayoutTotem>
+    </Background>
   );
 }
 

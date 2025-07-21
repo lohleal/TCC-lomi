@@ -19,10 +19,11 @@ export const Botao = styled.button`
 `;
 
 export const Link = styled.a`
-  font-size: 5px;
+  font-size: 10px;
   color: #5b2c06;
-
+  text-decoration: none;
 `;
+
 
 export const Conteudo = styled.div`
   font-family: 'Georgia', serif;
