@@ -1,31 +1,33 @@
-// src/pages/LoginFuncionario/style.js
+//LoginFuncionario/style.js
 import styled from 'styled-components';
-import fundo from '../../image/telaFundo.jpg';
 
-export const Background = styled.div`
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
-  background-image: url('${fundo}');
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+export const Botao = styled.button`
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  background-color: #c4bba6;  /* Cor de fundo parecida com a da imagem */
+  border: 2px solid #5a5a49; /* Borda fina com cor escura */
+  border-radius: 20px;        /* Deixa as bordas arredondadas */
+  color: #3d3d3d;
+  font-weight: bold;
+  margin-top: 30px; 
+  cursor: pointer;
+
+  &:hover {
+    background-color: #b0a48e; /* Cor um pouco mais escura ao passar o mouse */
+    color: #000;
+  }
 `;
 
-export const Container = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100vh;
+export const Link = styled.a`
+  font-size: 5px;
+  color: #5b2c06;
+
 `;
 
-export const Titulo = styled.h1`
-  position: absolute;
-  top: 23%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+export const Conteudo = styled.div`
+  font-family: 'Georgia', serif;
   font-size: 30px;
-  color: #333;
-  font-family: 'Courier New', Courier, monospace;
+  color: #5b2c06;
+  margin-top: 20px;
+  
 `;
-
