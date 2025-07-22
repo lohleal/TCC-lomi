@@ -6,6 +6,7 @@ import { Conteudo } from './style';
 import { BotaoXicara } from './style';
 import Background from '../../components/Background';
 import Voltar from '../../components/BotaoVoltar';
+import LinkNone from '../../components/LinkNone';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -34,7 +35,7 @@ function LoginCliente() {
             </LayoutTotem>
 
             <Voltar>
-                <a href="/">Voltar</a>
+                <LinkNone to="/">Voltar</LinkNone>
             </Voltar>
         </Background>
     );

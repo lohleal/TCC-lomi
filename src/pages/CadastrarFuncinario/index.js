@@ -1,4 +1,4 @@
-// src/pages/LoginFuncionario/index.js
+// src/pages/CadastrarFuncionario/index.js
 import React, { useState } from 'react';
 import LayoutTotem from '../../components/LayoutTotem';
 import { InputStyled } from '../../components/InputTotem/style';
@@ -8,14 +8,14 @@ import { Conteudo, ContainerBotoes } from './style';
 import Background from '../../components/Background';
 
 
-function LoginFuncionario() {
+function CadastrarFuncionario() {
   const [usuario, setUsuario] = useState('');
   const [senha, setSenha] = useState('');
 
   return (
     <Background>
 
-      <LayoutTotem titulo="Entrar">
+      <LayoutTotem titulo="Cadastre-se">
 
         <Conteudo>Usuário</Conteudo>
         <InputStyled
@@ -33,16 +33,13 @@ function LoginFuncionario() {
         <ContainerBotoes>
 
           <Botao onClick={() => console.log('Confirmar clicado')}>
-            <a href="/menu principal" style={{ textDecoration: 'none', color: 'inherit' }}>Confirmar</a>
+            <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>Voltar</a>
           </Botao>
 
           <Botao onClick={() => console.log('Cadastrar')}>
-            <a href="/cadastrar-funcionario" style={{ textDecoration: 'none', color: 'inherit' }}>Cadastrar</a>
+            <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>Confirmar</a>
           </Botao>
 
-          <Botao onClick={() => console.log('Confirmar clicado')}>
-            <a href="/cliente" style={{ textDecoration: 'none', color: 'inherit' }}>Área do Cliente</a>
-          </Botao>
         </ContainerBotoes>
 
 
@@ -51,4 +48,4 @@ function LoginFuncionario() {
   );
 }
 
-export default LoginFuncionario;
+export default CadastrarFuncionario;

@@ -6,6 +6,9 @@ import { Sidebar, Logo, Menu, MenuItem } from '../../components/MenuLateral/styl
 import { Card, Imagem, Detalhes, Nome, Preco, BotaoCarrinho, Titulo, GridProdutos } from '../../components/CardProdutos/style';
 import Background from '../../components/Background';
 import Voltar from '../../components/BotaoVoltar';
+import CarrinhoTotem from '../../components/CarrinhoTotem';
+import BotaoVoltarCliente from '../../components/VoltarCliente';
+
 
 import { useLocation } from 'react-router-dom';
 
@@ -37,9 +40,7 @@ export default function CardapioBebidas() {
                     <LinkNone to="/cardapio-salgados"><MenuItem>SALGADOS</MenuItem></LinkNone>
                     <LinkNone to="/cardapio-doces"><MenuItem>DOCES</MenuItem></LinkNone>
                     
-                    <Voltar>
-                        <a href="/cliente">Voltar</a>
-                    </Voltar>
+                     <BotaoVoltarCliente/ >
 
                 </Menu>
             </Sidebar>
@@ -62,10 +63,8 @@ export default function CardapioBebidas() {
                         ))}
                     </GridProdutos>
                 </div>
-                <BotaoCarrinho>
-                    <span className="material-symbols-outlined">shopping_cart</span>
-                </BotaoCarrinho>
-
+                
+                <CarrinhoTotem />
             </Background>
         </div>
     );

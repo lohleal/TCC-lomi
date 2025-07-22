@@ -1,17 +1,18 @@
 // src/pages/CardapioCafeQ.js
-import React from 'react';
+
 import { useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
 
 import { Sidebar, Logo, Menu, MenuItem } from '../../components/MenuLateral/style';
 import { Card, Imagem, Detalhes, Nome, Preco, BotaoCarrinho, Titulo, GridProdutos } from '../../components/CardProdutos/style';
-import Voltar from '../../components/BotaoVoltar';
+import BotaoVoltar from '../../components/VoltarCliente';
 import Background from '../../components/Background';
 import LinkNone from '../../components/LinkNone';
-
-
+import CarrinhoTotem from '../../components/CarrinhoTotem';
+import BotaoVoltarCliente from '../../components/VoltarCliente';
 
 export default function CardapioCafeQ() {
-    // lista de produtos só para exemplo
+
     const produtos = [
         {
             nome: 'Cappuccino',
@@ -45,11 +46,8 @@ export default function CardapioCafeQ() {
         }
     ];
 
-
     const location = useLocation();
     const nomeCliente = location.state?.nome || 'Cliente';
-
-
 
     return (
         <div style={{ display: 'flex', height: '100vh', fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}>
@@ -62,10 +60,8 @@ export default function CardapioCafeQ() {
                     <LinkNone to="/cardapio-bebidas"><MenuItem>BEBIDAS</MenuItem></LinkNone>
                     <LinkNone to="/cardapio-salgados"><MenuItem>SALGADOS</MenuItem></LinkNone>
                     <LinkNone to="/cardapio-doces"><MenuItem>DOCES</MenuItem></LinkNone>
-                    
-                    <Voltar>
-                        <a href="/cliente">Voltar</a>
-                    </Voltar>
+
+                    <BotaoVoltarCliente/ >
 
                 </Menu>
             </Sidebar>
@@ -88,10 +84,8 @@ export default function CardapioCafeQ() {
                         ))}
                     </GridProdutos>
                 </div>
-                <BotaoCarrinho>
-                    <span className="material-symbols-outlined">shopping_cart</span>
-                </BotaoCarrinho>
 
+                <CarrinhoTotem />
             </Background>
         </div>
     );

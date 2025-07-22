@@ -9,6 +9,9 @@ import CardapioCafeG from './pages/CardapioCafeG';
 import CardapioBebidas from './pages/CardapioBebidas';
 import CardapioDoces from './pages/CardapioDoces';
 import CardapioSalgados from './pages/CardapioSalgados';
+import Pagamento from './pages/Pagamento';
+import CadastrarFuncionario from './pages/CadastrarFuncinario';
+import CadastrarProduto from './pages/CadastrarProduto';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -25,6 +28,10 @@ function App() {
       <Route path="/cardapio-bebidas" element={<CardapioBebidas />} /> 
       <Route path="/cardapio-doces" element={<CardapioDoces />} /> 
       <Route path="/cardapio-salgados" element={<CardapioSalgados />} /> 
+      <Route path="/pagamento" element={<Pagamento />} /> 
+      <Route path="/cadastrar-funcionario" element={<CadastrarFuncionario />} /> 
+      <Route path="/cadastrar-produto" element={<CadastrarProduto />} /> 
+      
       </Routes>
     </Router>
   );
