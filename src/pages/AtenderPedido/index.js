@@ -10,7 +10,8 @@ function AtenderPedido() {
     const [modalAberto, setModalAberto] = useState(false);
 
     const itensFixos = [
-        { quantidade: 1, produto: 'Café Expresso', tamanho: 'Pequeno', preco: 'R$ 5,00' },
+        { quantidade: 1, produto: 'Café Expresso', tamanho: '100mL', preco: 'R$ 10,00' },
+        { quantidade: 2, produto: 'Brownie de Chocolate', tamanho: 'Unidade', preco: 'R$ 10,00' },
     ];
 
     return (
@@ -31,9 +32,29 @@ function AtenderPedido() {
                             <td>Gil Eduardo</td>
                             <td>13:47</td>
                             <td>
-                                <LinkNone as="button" onClick={() => setModalAberto(true)}>
+                                <a as="button" onClick={() => setModalAberto(true)}>
                                     <Icone className="material-symbols-outlined">list_alt_check</Icone>
-                                </LinkNone>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Kamilly</td>
+                            <td>13:49</td>
+                            <td>
+                                <a as="button" onClick={() => setModalAberto(true)}>
+                                    <Icone className="material-symbols-outlined">list_alt_check</Icone>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Heloisa</td>
+                            <td>13:55</td>
+                            <td>
+                                <a as="button" onClick={() => setModalAberto(true)}>
+                                    <Icone className="material-symbols-outlined">list_alt_check</Icone>
+                                </a>
                             </td>
                         </tr>
                     </tbody>
@@ -52,7 +73,7 @@ function AtenderPedido() {
                     textoBotao="Finalizar"
                     linkBotao="/atender-pedido"
                 >
-                    <ul>
+                    <ul style={{ listStyle: 'none', paddingLeft: 0 }}>
                         {itensFixos.map((item, i) => (
                             <li key={i}>
                                 {item.quantidade} - {item.produto} - {item.tamanho} - {item.preco}

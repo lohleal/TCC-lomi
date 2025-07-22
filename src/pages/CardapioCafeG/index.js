@@ -20,7 +20,7 @@ export default function CardapioCafeG() {
         {
             nome: 'Iced Coffee Tradicional',
             tamanho: '300mL',
-            preco: 'R$ 10,00',
+            preco: 'R$ 19,99',
         },
         {
             nome: 'Latte Gelado',

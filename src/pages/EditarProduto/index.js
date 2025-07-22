@@ -9,29 +9,36 @@ function EditarProduto() {
     const [nome, setNome] = useState('');
     const [valor, setValor] = useState('');
     const [categoria, setCategoria] = useState('');
+    const [tamanho, setTamanho] = useState('');
 
     return (
         <Background>
 
             <LayoutTotem titulo="Editar Produto">
 
-                
+
                 <InputTotem
                     value={nome}
                     onChange={e => setNome(e.target.value)}
-                     placeholder="Nome"
+                    placeholder="Nome"
                 />
 
                 <InputTotem
                     value={valor}
                     onChange={e => setValor(e.target.value)}
-                     placeholder="Valor"
+                    placeholder="Valor"
+                />
+
+                <InputTotem
+                    value={tamanho}
+                    onChange={e => setValor(e.target.value)}
+                    placeholder="Tamanho"
                 />
 
                 <InputTotem
                     value={categoria}
                     onChange={e => setCategoria(e.target.value)}
-                     placeholder="Categoria"
+                    placeholder="Categoria"
                 />
 
                 <ContainerBotoes>

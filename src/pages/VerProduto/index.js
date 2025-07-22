@@ -24,6 +24,7 @@ function VerProduto() {
                             <th>ID</th>
                             <th>Nome</th>
                             <th>Valor</th>
+                            <th>Tamanho</th>
                             <th>Categoria</th>
                             <th>Ações</th>
                         </tr>
@@ -32,8 +33,9 @@ function VerProduto() {
                         <tr>
                             <td>1</td>
                             <td>Café Expresso</td>
-                            <td>R$ 5,00</td>
-                            <td>Bebida</td>
+                            <td>R$ 10,00</td>
+                            <td>100mL</td>
+                            <td>Café Quente</td>
                             <td>
                                 <LinkNone to="/editar-produto">
                                     <Icone className="material-symbols-outlined">edit</Icone>
@@ -44,8 +46,9 @@ function VerProduto() {
                         <tr>
                             <td>2</td>
                             <td>Capuccino</td>
-                            <td>R$ 7,00</td>
-                            <td>Bebida</td>
+                            <td>R$ 15,99</td>
+                            <td>150mL</td>
+                            <td>Café Quente</td>
                             <td>
 
                                 <LinkNone to="/editar-produto">
@@ -56,9 +59,10 @@ function VerProduto() {
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Capuccino</td>
-                            <td>R$ 7,00</td>
-                            <td>Bebida</td>
+                            <td>Torta de Limão</td>
+                            <td>R$ 12,00</td>
+                            <td>Fatia</td>
+                            <td>Doces</td>
                             <td>
                                 <LinkNone to="/editar-produto">
                                     <Icone className="material-symbols-outlined">edit</Icone>
@@ -68,9 +72,10 @@ function VerProduto() {
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>Capuccino</td>
-                            <td>R$ 7,00</td>
-                            <td>Bebida</td>
+                            <td>Iced Coffee Tradicional</td>
+                            <td>R$ 19,99</td>
+                            <td>350mL</td>
+                            <td>Café Gelado</td>
                             <td>
                                 <LinkNone to="/editar-produto">
                                     <Icone className="material-symbols-outlined">edit</Icone>
