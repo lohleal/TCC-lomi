@@ -78,7 +78,6 @@ export default function CardapioCafeQ() {
                             </Card>
                         ))}
                     </GridProdutos>
-               
 
                 <CarrinhoTotem />
             </Background>

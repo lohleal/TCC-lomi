@@ -1,4 +1,4 @@
-// src/pages/LoginCliente.js
+
 import { IconContainer, XicaraIcon, CheckIconOverlay } from './style';
 import React, { useState } from 'react';
 import LayoutTotem from '../../components/LayoutTotem';
@@ -36,8 +36,11 @@ function LoginCliente() {
                             <span className="material-symbols-outlined">local_cafe</span>
                         </XicaraIcon>
                         <CheckIconOverlay>
-                            <span className="material-symbols-outlined">check</span>
+                            <span className="material-symbols-outlined" style={{ fontSize: '12px' }}>
+                                check
+                            </span>
                         </CheckIconOverlay>
+
                     </IconContainer>
                 </BotaoXicara>
 

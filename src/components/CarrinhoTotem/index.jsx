@@ -1,8 +1,7 @@
 // src/components/CarrinhoTotem.jsx
 import React, { useState } from 'react';
-import { BotaoCarrinho } from '../CardProdutos/style'; // ajuste o caminho se necessário
-import CartModal from '../../components/CartModal'; // ajuste o caminho se necessário
-
+import { BotaoCarrinho } from '../CardProdutos/style';
+import CartModal from '../../components/CartModal';
 
 function CarrinhoTotem() {
   const [modalAberto, setModalAberto] = useState(false);
@@ -19,8 +18,14 @@ function CarrinhoTotem() {
         <span className="material-symbols-outlined">shopping_cart</span>
       </BotaoCarrinho>
 
-      <CartModal aberto={modalAberto} onFechar={() => setModalAberto(false)}>
-        <ul>
+      <CartModal
+        aberto={modalAberto}
+        onFechar={() => setModalAberto(false)}
+        titulo="Seu Pedido"
+        textoBotao="Confirmar Pedido"
+        linkBotao="/pagamento"
+      >
+        <ul style={{ listStyleType: 'none', padding: 0 }}>
           {itensFixos.map((item, i) => (
             <li key={i}>
               {item.nome} - {item.tamanho} - {item.preco}

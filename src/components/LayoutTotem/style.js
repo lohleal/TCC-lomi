@@ -3,8 +3,6 @@ import styled from 'styled-components';
 //import fundo from '../../image/imgFundo.jpg';
 import grao from '../../image/grao.png';
 
-
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -24,20 +22,22 @@ export const Titulo = styled.h1`
   font-size: 40px;
   color: #5b2c06;
   padding: 2px;
- 
+ margin-bottom: 15px; 
 `;
 
+
 export const Linha = styled.div`
-  height: 20px; /* aumentei para caber o círculo maior */
+  width: 100%;
+  height: 20px;
   background-image: repeating-radial-gradient(
     circle,
     #2f4225 0px,
-    #2f4225 8px,
-    transparent 6px,
-    transparent 30px
-  );
-  background-size: 35px 20px;
-  
+    #2f4225 4px,
+    transparent 4px,
+    transparent 20px
+    );
+  background-position: 0px -6px;
+  background-size: 30px 20px;
 `;
 
 

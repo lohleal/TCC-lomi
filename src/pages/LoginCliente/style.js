@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const Conteudo = styled.div`
   font-family: 'Georgia', serif;
   font-size: 40px;
@@ -52,11 +53,13 @@ export const XicaraIcon = styled.span`
 
 export const CheckIconOverlay = styled.span`
   position: absolute;
-  left: 13.5px;
+  left: 14.5px;
   top: -3px; 
   color: white;
-    svg {
-    font-size: 10px;
-  }
 
+  svg {
+    font-size: 8px !important;
+    width: 8px;
+    height: 8px;
+  }
 `;

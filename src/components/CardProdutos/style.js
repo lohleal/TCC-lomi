@@ -1,3 +1,5 @@
+ 
+
 // src/components/CardProdutos.js
 import styled from 'styled-components';
 
@@ -12,6 +14,14 @@ export const Card = styled.button`
   width: 240px;
   height: 100px;
   margin-bottom: 15px;
+
+    &:hover {
+    background-color: #a9b2a1;
+  }
+
+  &:active {
+    background-color: #a9b2a1aa; 
+  }
 `;
 
 export const Imagem = styled.img`
@@ -62,6 +72,26 @@ export const BotaoCarrinho = styled.button`
   }
 `;
 
+export const BotaoAdd = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+  background-color: #f9e8d9;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+
+  &:hover {
+    background-color: #a9b2a1;
+  }
+`;
+
 export const Titulo = styled.h2`
   background-color: #f9e8d9;
   padding: 12px 40px;
@@ -87,4 +117,3 @@ export const GridProdutos = styled.div`
   margin: 0 auto; 
   padding-bottom: 100px; 
 `;
-
