@@ -63,3 +63,22 @@ export const QRCodeContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
+
+export const Botao = styled.button`
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  background-color: #c4bba6;  
+  border: 2px solid #5a5a49; 
+  border-radius: 20px;        
+  color: #3d3d3d;
+  font-weight: bold;
+  margin-top: 30px; 
+  cursor: pointer;
+  margin-bottom: 10px;
+
+
+  &:hover {
+    background-color: #b0a48e;
+    color: #000;
+  }
+`;

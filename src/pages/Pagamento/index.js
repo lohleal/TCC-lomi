@@ -5,7 +5,6 @@ import { PedidoContainer, ListaItens, Titulo, Item, Total, Botoes, Botao, QRCode
 import Voltar from "../../components/BotaoVoltar";
 import LinkNone from "../../components/LinkNone";
 
-
 export default function Pagamento() {
     // Simulando os dados do pedido
     const itens = [
@@ -41,10 +40,15 @@ export default function Pagamento() {
                     />
                 </QRCodeContainer>
             </PedidoContainer>
+
             <Voltar>
                 <LinkNone to="/cardapio-cafeQ">Voltar</LinkNone>
             </Voltar>
-            
+
+            <Botao onClick={() => console.log('log clicado')}>
+                <a href="/cliente" style={{ textDecoration: 'none', color: 'inherit' }}>Finalizar</a>
+            </Botao>
+
         </Background>
     );
 }
