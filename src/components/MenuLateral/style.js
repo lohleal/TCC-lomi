@@ -4,7 +4,7 @@ import logo from '../../image/logo.png';
 import xicara from '../../image/xicara.png';
 
 export const Sidebar = styled.div`
-  width: 350px; /* aumentei de 220px para 280px */
+  width: 350px; 
   background-color: #f9e8d9;
   display: flex;
   flex-direction: column;
@@ -20,8 +20,8 @@ export const Logo = styled.div`
   background-position: center;
   background-repeat: no-repeat;
 
-  width: 200px;  /* aumentei de 140px para 180px */
-  height: 200px; /* aumentei de 140px para 180px */
+  width: 200px;  
+  height: 200px; 
   border-radius: 50%;
   margin-bottom: 20px;
 `;
@@ -36,10 +36,10 @@ export const Menu = styled.ul`
 export const MenuItem = styled.li`
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 600;
-  font-size: 1.3rem; /* aumentei de 1.1rem para 1.3rem */
+  font-size: 1.3rem; 
   color: #754c24;
   background-color: #d5c4b1;
-  padding: 16px 27px; /* um pouco mais de espaço */
+  padding: 16px 27px; 
   cursor: pointer;
   text-align: center;
   margin-bottom: 5px;

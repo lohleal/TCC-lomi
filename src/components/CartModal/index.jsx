@@ -14,7 +14,7 @@ export default function CartModal({
   children,
   titulo = "Carrinho",
   textoBotao = "Finalizar Compra",
-  linkBotao = "/pagamento" // novo: torna o link reutilizável
+  linkBotao = "/pagamento" 
 }) {
   if (!aberto) return null;
 

@@ -1,9 +1,9 @@
 // src/components/CarrinhoTotem.jsx
 import React, { useState } from 'react';
-import { BotaoCarrinho } from '../CardProdutos/style'; // ajuste o caminho se necessário
-import { BotaoAdd } from '../CardProdutos/style'; // ajuste o caminho se necessário
+import { BotaoCarrinho } from '../CardProdutos/style'; 
+import { BotaoAdd } from '../CardProdutos/style'; 
 
-import CartModal from '../../components/CartModal'; // ajuste o caminho se necessário
+import CartModal from '../../components/CartModal'; 
 
 
 function CarrinhoTotem() {

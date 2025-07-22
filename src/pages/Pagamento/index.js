@@ -15,7 +15,6 @@ export default function Pagamento() {
         { nome: "Latte", preco: 8.99 },
     ];
 
-    // Soma dos preços
     const total = itens.reduce((acc, item) => acc + item.preco, 0).toFixed(2);
 
     return (

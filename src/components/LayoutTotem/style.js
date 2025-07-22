@@ -52,20 +52,20 @@ export const GraoCafe = styled.img`
 &.right {
   bottom: 5px;
   right: -35px;
-  transform: scaleX(1); /* Espelha para encaixar no novo lado */
+  transform: scaleX(1); 
 }
 
 &.topRight {
   top: 360px;
   right: -45px;
-  transform: rotate(100deg); /* Ajusta conforme o novo lado */
+  transform: rotate(100deg); 
 }
 
 &.left {
   top: -25px;
   left: -35px;
-  transform: scaleX(-1); /* Ou remova, se quiser o lado natural */
-  transform: rotate(360deg); /* Ou scaleX(1), dependendo do efeito */
+  transform: scaleX(-1);
+  transform: rotate(360deg); 
   width: 90px;
   height: 90px;
 }
@@ -73,7 +73,7 @@ export const GraoCafe = styled.img`
 &.bottomLeft {
   bottom: 370px;
   left: -40px;
-  transform: rotate(100deg); /* Ou scaleX(1), dependendo do efeito */
+  transform: rotate(100deg); 
  
 }
 
