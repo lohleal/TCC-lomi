@@ -6,7 +6,7 @@ import Voltar from "../../components/BotaoVoltar";
 import LinkNone from "../../components/LinkNone";
 
 export default function Pagamento() {
-    // Simulando os dados do pedido
+
     const itens = [
         { nome: "Café Mocca", preco: 7.99 },
         { nome: "Cookie", preco: 3.99 },

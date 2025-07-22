@@ -13,7 +13,7 @@ function MenuPrincipal() {
 
             <LayoutTotem titulo="Menu Principal">
                 <Botao>
-                    <LinkNone to="/cadastrar-produto">Atender Pedidos</LinkNone>
+                    <LinkNone to="/atender-pedido">Atender Pedidos</LinkNone>
                 </Botao>
 
                 <Botao>
@@ -21,7 +21,7 @@ function MenuPrincipal() {
                 </Botao>
     
                 <Botao>
-                    <LinkNone to="/cadastrar-produto">Ver Produtos</LinkNone>
+                    <LinkNone to="/ver-produto">Ver Produtos</LinkNone>
                 </Botao>
             </LayoutTotem>
 

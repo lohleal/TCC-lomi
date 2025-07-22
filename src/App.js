@@ -12,6 +12,10 @@ import CardapioSalgados from './pages/CardapioSalgados';
 import Pagamento from './pages/Pagamento';
 import CadastrarFuncionario from './pages/CadastrarFuncinario';
 import CadastrarProduto from './pages/CadastrarProduto';
+import EditarProduto from './pages/EditarProduto';
+import VerProduto from './pages/VerProduto';
+import AtenderPedido from './pages/AtenderPedido';
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -31,7 +35,10 @@ function App() {
       <Route path="/pagamento" element={<Pagamento />} /> 
       <Route path="/cadastrar-funcionario" element={<CadastrarFuncionario />} /> 
       <Route path="/cadastrar-produto" element={<CadastrarProduto />} /> 
-      
+      <Route path="/editar-produto" element={<EditarProduto />} /> 
+      <Route path="/ver-produto" element={<VerProduto />} /> 
+      <Route path="/atender-pedido" element={<AtenderPedido />} /> 
+
       </Routes>
     </Router>
   );
