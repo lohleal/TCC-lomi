@@ -1,4 +1,5 @@
 // src/pages/LoginCliente.js
+import { IconContainer, XicaraIcon, CheckIconOverlay } from './style';
 import React, { useState } from 'react';
 import LayoutTotem from '../../components/LayoutTotem';
 import InputTotem from '../../components/InputTotem';
@@ -9,7 +10,6 @@ import Voltar from '../../components/BotaoVoltar';
 import LinkNone from '../../components/LinkNone';
 
 import { useNavigate } from 'react-router-dom';
-
 
 function LoginCliente() {
     const [nome, setNome] = useState('');
@@ -29,9 +29,18 @@ function LoginCliente() {
                     onChange={e => setNome(e.target.value)}
                 />
 
-                <BotaoXicara>
-                    <button onClick={confirmarLogin}>Confirmar</button>
+                <BotaoXicara onClick={confirmarLogin}>
+                    Confirmar
+                    <IconContainer>
+                        <XicaraIcon>
+                            <span className="material-symbols-outlined">local_cafe</span>
+                        </XicaraIcon>
+                        <CheckIconOverlay>
+                            <span className="material-symbols-outlined">check</span>
+                        </CheckIconOverlay>
+                    </IconContainer>
                 </BotaoXicara>
+
             </LayoutTotem>
 
             <Voltar>

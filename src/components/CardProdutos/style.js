@@ -70,11 +70,13 @@ export const Titulo = styled.h2`
   font-weight: bold;
   font-size: 2.5rem;
   color: #452f15;
-  margin: 1rem 0 1rem 20px; /* top 1rem, right 0, bottom 1rem, left 20px */
+  margin: 1rem 0 1rem 20px;
   text-align: left;
   width: fit-content;
+   position: absolute;
+  margin-top: -580px;
+  margin-left: -600px;
 `;
-
 
 export const GridProdutos = styled.div`
   display: flex;

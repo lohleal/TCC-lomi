@@ -1,7 +1,7 @@
 // src/components/LayoutTotem/style.js
 import styled from 'styled-components';
 //import fundo from '../../image/imgFundo.jpg';
-import grao from '../../image/grao.jpg';
+import grao from '../../image/grao.png';
 
 
 
@@ -45,18 +45,37 @@ export const GraoCafe = styled.img`
   background-image: url(${grao});
   background-size: contain;
   background-repeat: no-repeat;
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
   position: absolute;
 
-  &.left {
-    top: -20px;
-    left: -20px;
-  }
+&.right {
+  bottom: 5px;
+  right: -35px;
+  transform: scaleX(1); /* Espelha para encaixar no novo lado */
+}
 
-  &.right {
-    bottom: -20px;
-    right: -20px;
-  }
+&.topRight {
+  top: 360px;
+  right: -45px;
+  transform: rotate(100deg); /* Ajusta conforme o novo lado */
+}
+
+&.left {
+  top: -25px;
+  left: -35px;
+  transform: scaleX(-1); /* Ou remova, se quiser o lado natural */
+  transform: rotate(360deg); /* Ou scaleX(1), dependendo do efeito */
+  width: 90px;
+  height: 90px;
+}
+
+&.bottomLeft {
+  bottom: 370px;
+  left: -40px;
+  transform: rotate(100deg); /* Ou scaleX(1), dependendo do efeito */
+ 
+}
+
+
 `;
-

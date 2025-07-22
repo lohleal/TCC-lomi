@@ -45,12 +45,7 @@ export default function CardapioBebidas() {
                 </Menu>
             </Sidebar>
             <Background>
-                <div style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    marginTop: '-100px',
-                }}>
+               
                     <Titulo>Bem vindo(a), {nomeCliente}!!!</Titulo>
                     <GridProdutos>
                         {produtos.map((p, i) => (
@@ -62,7 +57,6 @@ export default function CardapioBebidas() {
                             </Card>
                         ))}
                     </GridProdutos>
-                </div>
                 
                 <CarrinhoTotem />
             </Background>
