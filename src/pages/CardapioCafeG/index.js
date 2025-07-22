@@ -18,10 +18,50 @@ export default function CardapioCafeG() {
 
     const produtos = [
         {
-            nome: 'Café Frappé',
+            nome: 'Iced Coffee Tradicional',
+            tamanho: '300mL',
+            preco: 'R$ 10,00',
+        },
+        {
+            nome: 'Latte Gelado',
+            tamanho: '350mL',
+            preco: 'R$ 12,00',
+        },
+        {
+            nome: 'Mocha Gelado',
+            tamanho: '400mL',
+            preco: 'R$ 14,00',
+        },
+        {
+            nome: 'Caramel Macchiato Gelado',
+            tamanho: '350mL',
+            preco: 'R$ 15,00',
+        },
+        {
+            nome: 'Cold Brew',
+            tamanho: '300mL',
+            preco: 'R$ 13,00',
+        },
+        {
+            nome: 'Vanilla Sweet Cream Cold Brew',
+            tamanho: '300mL',
+            preco: 'R$ 13,00',
+        },
+        {
+            nome: 'Affogato',
             tamanho: '200mL',
-            preco: 'R$ 15,99',
-        }
+            preco: 'R$ 17,00',
+        },
+        {
+            nome: 'Frappé de Baunilha',
+            tamanho: '350mL',
+            preco: 'R$ 18,50',
+        },
+        {
+            nome: 'Irish Coffee Gelado',
+            tamanho: '300mL',
+            preco: 'R$ 20,00',
+        },
     ];
 
 
@@ -41,28 +81,27 @@ export default function CardapioCafeG() {
                     <LinkNone to="/cardapio-salgados"><MenuItem>SALGADOS</MenuItem></LinkNone>
                     <LinkNone to="/cardapio-doces"><MenuItem>DOCES</MenuItem></LinkNone>
 
-                    <BotaoVoltarCliente/ >
+                    <BotaoVoltarCliente />
 
                 </Menu>
             </Sidebar>
             <Background>
-                
-                    <Titulo>Bem vindo(a), {nomeCliente}!!!</Titulo>
-                    <GridProdutos>
-                        {produtos.map((p, i) => (
-                            <Card key={i}>
-                                <Detalhes>
-                                    <Nome>{p.nome} {p.tamanho}</Nome>
-                                    <Preco>{p.preco}</Preco>
-                                </Detalhes>
-                            </Card>
-                        ))}
-                    </GridProdutos>
-               
-                
+
+                <Titulo>Bem vindo(a), {nomeCliente}!!!</Titulo>
+                <GridProdutos>
+                    {produtos.map((p, i) => (
+                        <Card key={i}>
+                            <Detalhes>
+                                <Nome>{p.nome} {p.tamanho}</Nome>
+                                <Preco>{p.preco}</Preco>
+                            </Detalhes>
+                        </Card>
+                    ))}
+                </GridProdutos>
+
+
                 <CarrinhoTotem />
             </Background>
         </div>
     );
 }
-

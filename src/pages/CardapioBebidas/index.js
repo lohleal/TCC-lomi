@@ -1,4 +1,4 @@
-// src/pages/CardapioCafeG.js
+
 import React from 'react';
 
 
@@ -18,12 +18,38 @@ import LinkNone from '../../components/LinkNone';
 export default function CardapioBebidas() {
 
     const produtos = [
-        {
-            nome: 'Coca-Cola',
-            tamanho: '350mL',
-            preco: 'R$ 8,99',
-        }
-    ];
+
+    {
+        nome: 'Chá Gelado de Pêssego',
+        tamanho: '350mL',
+        preco: 'R$ 9,00',
+    },
+    {
+        nome: 'Chá Gelado de Açaí',
+        tamanho: '350mL',
+        preco: 'R$ 9,00',
+    },
+    {
+        nome: 'Chá Verde com Limão',
+        tamanho: '350mL',
+        preco: 'R$ 9,50',
+    },
+    {
+        nome: 'Limonada Suíça',
+        tamanho: '400mL',
+        preco: 'R$ 10,00',
+    },
+    {
+        nome: 'Soda Italiana de Morango',
+        tamanho: '350mL',
+        preco: 'R$ 10,00',
+    },
+    {
+        nome: 'Água com Gás e Limão',
+        tamanho: '300mL',
+        preco: 'R$ 7,00',
+    },
+];
 
 
     const location = useLocation();
@@ -63,4 +89,3 @@ export default function CardapioBebidas() {
         </div>
     );
 }
-

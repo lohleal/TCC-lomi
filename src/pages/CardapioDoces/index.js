@@ -14,13 +14,49 @@ import { useLocation } from 'react-router-dom';
 import LinkNone from '../../components/LinkNone';
 
 
-export default function CardapioCafeG() {
+export default function CardapioDoces() {
 
     const produtos = [
         {
-            nome: 'Donuts',
-            tamanho: '50g',
-            preco: 'R$ 7,99',
+            nome: 'Brownie de Chocolate',
+            tamanho: 'Unidade',
+            preco: 'R$ 10,00',
+        },
+        {
+            nome: 'Cheesecake de Frutas Vermelhas',
+            tamanho: 'Fatia',
+            preco: 'R$ 14,00',
+        },
+        {
+            nome: 'Torta de Limão',
+            tamanho: 'Fatia',
+            preco: 'R$ 12,00',
+        },
+        {
+            nome: 'Cookies de Gotas de Chocolate',
+            tamanho: 'Unidade',
+            preco: 'R$ 6,00',
+        },
+        {
+            nome: 'Muffin de Blueberry',
+            tamanho: 'Unidade',
+            preco: 'R$ 9,00',
+        },
+        {
+            nome: 'Pudim de Leite',
+            tamanho: 'Fatia',
+            preco: 'R$ 11,00',
+        },
+        {
+            nome: 'Bolo de Cenoura com Chocolate',
+            tamanho: 'Fatia',
+            preco: 'R$ 10,00',
+        },
+    
+        {
+            nome: 'Pavê de Chocolate',
+            tamanho: 'Fatia',
+            preco: 'R$ 13,00',
         }
     ];
 

@@ -43,7 +43,22 @@ export default function CardapioCafeQ() {
             nome: 'Latte',
             tamanho: '250mL',
             preco: 'R$ 16,00',
-        }
+        },
+        {
+            nome: 'Espresso',
+            tamanho: '60mL',
+            preco: 'R$ 8,00',
+        },
+        {
+            nome: 'Cappuccino',
+            tamanho: '200mL',
+            preco: 'R$ 14,00',
+        },
+        {
+            nome: 'Macchiato',
+            tamanho: '80mL',
+            preco: 'R$ 10,50',
+        },
     ];
 
     const location = useLocation();

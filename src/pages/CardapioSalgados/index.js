@@ -14,14 +14,57 @@ import { useLocation } from 'react-router-dom';
 import LinkNone from '../../components/LinkNone';
 
 
-export default function CardapioCafeG() {
+export default function CardapioSalgados() {
 
     const produtos = [
         {
             nome: 'Coxinha c/ Catupiry',
             tamanho: '100g',
-            preco: 'R$ 8,99',
-        }
+            preco: 'R$ 8,99'
+        },
+        {
+            nome: 'Coxinha de Frango',
+            tamanho: 'Unidade',
+            preco: 'R$ 7,00',
+        },
+        {
+            nome: 'Empada de Frango',
+            tamanho: 'Unidade',
+            preco: 'R$ 7,50',
+        },
+        {
+            nome: 'Pão de Queijo',
+            tamanho: 'Unidade',
+            preco: 'R$ 5,00',
+        },   
+        {
+            nome: 'Tortinha de Palmito',
+            tamanho: 'Unidade',
+            preco: 'R$ 9,00',
+
+        },
+        {
+            nome: 'Croissant de Presunto e Queijo',
+            tamanho: 'Unidade',
+            preco: 'R$ 12,00',
+        },
+        {
+            nome: 'Quiche de Queijo e Bacon',
+            tamanho: 'Unidade',
+            preco: 'R$ 15,00',
+        },
+        {
+            nome: 'Wrap de Frango com Cream Cheese',
+            tamanho: 'Unidade',
+            preco: 'R$ 18,00',
+        },
+        
+        {
+            nome: 'Torrada com Avocado e Ovo Pochê',
+            tamanho: 'Unidade',
+            preco: 'R$ 20,00',
+        },
+       
     ];
 
 

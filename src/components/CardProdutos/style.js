@@ -1,5 +1,3 @@
- 
-
 // src/components/CardProdutos.js
 import styled from 'styled-components';
 
@@ -14,6 +12,8 @@ export const Card = styled.button`
   width: 240px;
   height: 100px;
   margin-bottom: 15px;
+  flex-direction: column;
+  justify-content: center;
 
     &:hover {
     background-color: #a9b2a1;
@@ -43,6 +43,8 @@ export const Nome = styled.span`
   font-weight: bold;
   font-size: 1rem;
   color: #452f15;
+  text-align: center;     
+  width: 100%;  
 `;
 
 export const Preco = styled.span`
@@ -90,6 +92,10 @@ export const BotaoAdd = styled.button`
   &:hover {
     background-color: #a9b2a1;
   }
+
+  &:active {
+    background-color: #a9b2a1aa; 
+  }
 `;
 
 export const Titulo = styled.h2`
@@ -108,12 +114,13 @@ export const Titulo = styled.h2`
   margin-left: -600px;
 `;
 
+
 export const GridProdutos = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; 
-  gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 240px); /* 3 colunas fixas com a largura do card */
+  grid-template-rows: repeat(3, 100px); /* 3 linhas fixas com a altura do card */
+  gap: 30px;
   max-width: 900px;
-  margin: 0 auto; 
-  padding-bottom: 100px; 
+  margin: 100px auto 0 auto; /* só aumentando margem superior */;
+  padding-bottom: 100px;
 `;
