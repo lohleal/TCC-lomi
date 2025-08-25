@@ -1,15 +1,52 @@
 // src/pages/EditarProduto/index.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import LayoutTotem from '../../components/LayoutTotem';
-import { Link } from 'react-router-dom';
 import { Conteudo, ContainerBotoes, InputTotem, Botao } from './style';
 import Background from '../../components/Background';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+import axios from 'axios';
 
 function EditarProduto() {
+    const { id } = useParams();
+
     const [nome, setNome] = useState('');
     const [valor, setValor] = useState('');
     const [categoria, setCategoria] = useState('');
     const [tamanho, setTamanho] = useState('');
+
+    useEffect(() => {
+        const fetchProduct = async () => {
+            try {
+                const response = await axios.get(`http://localhost:3000/api/products/${id}`);
+                const produto = response.data;
+                setNome(produto.nome);
+                setValor(produto.valor);
+                setTamanho(produto.tamanho);
+                setCategoria(produto.categoria);
+            } catch (error) {
+                console.error("Erro ao buscar produto:", error);
+            }
+        };
+
+        fetchProduct();
+    }, [id]);
+
+    const updateProduct = async () => {
+        try {
+            await axios.put(`http://localhost:3000/api/products/${id}`, {
+                nome,
+                valor,
+                tamanho,
+                categoria,
+            });
+            //alert("Produto alterado com sucesso!");
+        } catch (error) {
+            console.error("Erro ao alterar produto:", error);
+
+        }
+    };
 
     return (
         <Background>
@@ -31,7 +68,7 @@ function EditarProduto() {
 
                 <InputTotem
                     value={tamanho}
-                    onChange={e => setValor(e.target.value)}
+                    onChange={e => setTamanho(e.target.value)}
                     placeholder="Tamanho"
                 />
 
@@ -43,12 +80,16 @@ function EditarProduto() {
 
                 <ContainerBotoes>
 
-                    <Botao onClick={() => console.log('Confirmar clicado')}>
-                        <a href="/ver-produto" style={{ textDecoration: 'none', color: 'inherit' }}>Voltar</a>
+                    <Botao>
+                        <Link to="/ver-produto" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            Voltar
+                        </Link>
                     </Botao>
 
-                    <Botao onClick={() => console.log('Cadastrar')}>
-                        <a href="/ver-produto" style={{ textDecoration: 'none', color: 'inherit' }}>Confirmar</a>
+                    <Botao onClick={updateProduct}>
+                        <Link to="/ver-produto" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            Confirmar
+                        </Link>
                     </Botao>
 
                 </ContainerBotoes>

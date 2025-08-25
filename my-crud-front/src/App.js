@@ -35,7 +35,7 @@ function App() {
       <Route path="/pagamento" element={<Pagamento />} /> 
       <Route path="/cadastrar-funcionario" element={<CadastrarFuncionario />} /> 
       <Route path="/cadastrar-produto" element={<CadastrarProduto />} /> 
-      <Route path="/editar-produto" element={<EditarProduto />} /> 
+      <Route path="/editar-produto/:id" element={<EditarProduto />} />
       <Route path="/ver-produto" element={<VerProduto />} /> 
       <Route path="/atender-pedido" element={<AtenderPedido />} /> 
 
@@ -45,9 +45,3 @@ function App() {
 }
 
 export default App;
-
-//log cliente
-//log func
-//cad func
-//cad produ
-//edit produ

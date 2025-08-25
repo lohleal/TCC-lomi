@@ -20,6 +20,7 @@ class ProductController {
         }
     }
 
+    
     async getProductById(req, res) {
         try {
             const product = await productService.getProductById(req.params.id);
@@ -41,6 +42,8 @@ class ProductController {
         }
     }
 
+
+    
     async deleteProduct(req, res) {
         try {
             const result = await productService.deleteProduct(req.params.id);

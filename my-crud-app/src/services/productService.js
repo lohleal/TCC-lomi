@@ -4,16 +4,21 @@ class ProductService {
 
     createProduct(productData) {
         // Aqui poderia haver validações de negócio, como verificar se o email já existe
-        if (!productData.nome || !productData.valor || !productData.categoria || !productData.tamanho) {
+        if (!productData.nome || !productData.valor || !productData.tamanho || !productData.categoria) {
             throw new Error("Os dados são obrigatórios.");
+        }
+        if(productData.nome){
+
         }
         return productRepository.create(productData);
     }
 
+    
     getAllProducts() {
         return productRepository.findAll();
     }
 
+    
     getProductById(id) {
         const product = productRepository.findById(parseInt(id));
         if (!product) {
@@ -24,7 +29,7 @@ class ProductService {
 
     updateProduct(id, productData) {
         // Validações de negócio antes de atualizar
-        if (!productData.nome && !productData.valor && !productData.categoria && !productData.tamanho) {
+        if (!productData.nome && !productData.valor && !productData.tamanho && !productData.categoria ) {
             throw new Error("Pelo menos um campo deve ser fornecido para atualização.");
         }
         const updatedProduct = productRepository.update(parseInt(id), productData);
@@ -41,6 +46,7 @@ class ProductService {
         }
         return { message: "Produto deletado com sucesso." };
     }
+        
 }
 
 module.exports = new ProductService();
