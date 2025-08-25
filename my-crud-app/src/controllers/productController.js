@@ -19,7 +19,6 @@ class ProductController {
             res.status(500).json({ message: error.message });
         }
     }
-
     
     async getProductById(req, res) {
         try {
@@ -41,8 +40,6 @@ class ProductController {
             res.status(400).json({ message: error.message });
         }
     }
-
-
     
     async deleteProduct(req, res) {
         try {

@@ -28,7 +28,6 @@ class ProductService {
     }
 
     updateProduct(id, productData) {
-        // Validações de negócio antes de atualizar
         if (!productData.nome && !productData.valor && !productData.tamanho && !productData.categoria ) {
             throw new Error("Pelo menos um campo deve ser fornecido para atualização.");
         }

@@ -10,16 +10,13 @@ class ProductRepository {
         return newProduct;
     }
 
-    
     findAll() {
         return products;
     }
 
-    
     findById(id) {
         return products.find(product => product.id === id);
     }
-
     
     update(id, updatedProduct) {
         const index = products.findIndex(product => product.id === id);

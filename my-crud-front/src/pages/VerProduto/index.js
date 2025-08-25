@@ -26,7 +26,6 @@ function VerProduto() {
     const deleteProduct = async (id) => {
         try {
             await axios.delete(`http://localhost:3000/api/products/${id}`);
-            // Remove o produto do estado para atualizar a tabela
             setProdutos(produtos.filter(produto => produto.id !== id));
             //alert("Produto excluído com sucesso!");
         } catch (error) {

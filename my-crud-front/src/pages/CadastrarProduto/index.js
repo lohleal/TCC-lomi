@@ -22,7 +22,6 @@ function CadastrarProduto() {
                 categoria,
             });
             //alert("Produto cadastrado com sucesso!");
-            // Limpa os campos
             setNome("");
             setValor("");
             setTamanho("");
