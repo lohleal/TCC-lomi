@@ -1,7 +1,7 @@
 // src/pages/EditarProduto/index.js
 import React, { useState, useEffect } from 'react';
 import LayoutTotem from '../../components/LayoutTotem';
-import { Conteudo, ContainerBotoes, InputTotem, Botao } from './style';
+import { Conteudo, ContainerBotoes, InputTotem, Botao, SelectTotem } from './style';
 import Background from '../../components/Background';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -72,11 +72,14 @@ function EditarProduto() {
                     placeholder="Tamanho"
                 />
 
-                <InputTotem
-                    value={categoria}
-                    onChange={e => setCategoria(e.target.value)}
-                    placeholder="Categoria"
-                />
+                <SelectTotem value={categoria} onChange={e => setCategoria(e.target.value)}>
+                    <option value="" disabled hidden>Categoria</option>
+                    <option value="Café Quente">Café Quente</option>
+                    <option value="Café Gelado">Café Gelado</option>
+                    <option value="Doces">Doces</option>
+                    <option value="Salgados">Salgados</option>
+                    <option value="Bebidas">Bebidas</option>
+                </SelectTotem>
 
                 <ContainerBotoes>
 

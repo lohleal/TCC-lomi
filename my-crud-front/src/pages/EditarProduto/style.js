@@ -63,3 +63,21 @@ export const Conteudo = styled.div`
  }
 `;
 
+export const SelectTotem = styled.select`
+  width: 90%;
+  padding: 10px;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 1.2rem; /* ajuste para ficar igual ao "Tamanho" */
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #000;
+  color: #2f2f2f;
+  margin-bottom: 20px;
+  text-align: left;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid #000;
+  }
+`;

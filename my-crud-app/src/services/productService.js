@@ -13,12 +13,10 @@ class ProductService {
         return productRepository.create(productData);
     }
 
-    
     getAllProducts() {
         return productRepository.findAll();
     }
 
-    
     getProductById(id) {
         const product = productRepository.findById(parseInt(id));
         if (!product) {
@@ -26,7 +24,6 @@ class ProductService {
         }
         return product;
     }
-
     updateProduct(id, productData) {
         if (!productData.nome && !productData.valor && !productData.tamanho && !productData.categoria ) {
             throw new Error("Pelo menos um campo deve ser fornecido para atualização.");
@@ -37,7 +34,6 @@ class ProductService {
         }
         return updatedProduct;
     }
-
     deleteProduct(id) {
         const deleted = productRepository.delete(parseInt(id));
         if (!deleted) {
