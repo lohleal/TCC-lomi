@@ -1,12 +1,12 @@
 const express = require("express");
-const userController = require("../controllers/userController");
+const productController = require("../controllers/productController");
 const router = express.Router();
 // Rotas específicas devem vir antes das rotas com parâmetros
-router.get("/users/count", userController.getUsersCount);
-router.get("/users/search", userController.searchUsers);
-router.post("/users", userController.createUser);
-router.get("/users", userController.getAllUsers);
-router.get("/users/:id", userController.getUserById);
-router.put("/users/:id", userController.updateUser);
-router.delete("/users/:id", userController.deleteUser);
+router.get("/products/count", productController.getProductsCount);
+router.get("/products/search", productController.searchProducts);
+router.post("/products", productController.createProduct);
+router.get("/products", productController.getAllProducts);
+router.get("/products/:id", productController.getProductById);
+router.put("/products/:id", productController.updateProduct);
+router.delete("/products/:id", productController.deleteProduct);
 module.exports = router;

@@ -1,13 +1,17 @@
 const express = require("express");
 const { connectDB } = require("./config/database");
-const userRoutes = require("./routes/userRoutes");
+const productRoutes = require("./routes/productRoutes");
 const app = express();
+
 // Conectar ao banco de dados
 connectDB();
+
 // Middleware para parsear JSON no corpo das requisições
 app.use(express.json({ limit: '10mb' }));
+
 // Middleware para parsear dados de formulário URL-encoded
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+
 // Middleware para CORS (se necessário)
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
@@ -19,6 +23,7 @@ app.use((req, res, next) => {
         next();
     }
 });
+
 // Rota de saúde da aplicação
 app.get('/health', (req, res) => {
     res.status(200).json({
@@ -30,6 +35,7 @@ app.get('/health', (req, res) => {
         version: '1.0.0'
     });
 });
+
 // Rota raiz
 app.get('/', (req, res) => {
     res.status(200).json({
@@ -38,13 +44,14 @@ app.get('/', (req, res) => {
         message: 'API CRUD com Node.js, Express e MySQL',
         endpoints: {
             health: '/health',
-            users: '/api/users',
+            products: '/api/products',
             documentation: 'Consulte o README para mais informações'
         }
     });
 });
+
 // Monta as rotas de usuário sob o prefixo /api
-app.use("/api", userRoutes);
+app.use("/api", productRoutes);
 // Middleware para rotas não encontradas
 app.use('*', (req, res) => {
     res.status(404).json({
@@ -54,6 +61,7 @@ app.use('*', (req, res) => {
         method: req.method
     });
 });
+
 // Middleware de tratamento de erros genérico
 app.use((err, req, res, next) => {
     console.error('Erro na aplicação:', err.stack);
@@ -66,6 +74,7 @@ app.use((err, req, res, next) => {
             errors: messages
         });
     }
+
     // Erro de constraint única do Sequelize
     if (err.name === 'SequelizeUniqueConstraintError') {
         return res.status(400).json({
@@ -74,6 +83,7 @@ app.use((err, req, res, next) => {
             field: err.errors[0]?.path || 'unknown'
         });
     }
+
     // Erro de conexão com banco de dados
     if (err.name === 'SequelizeConnectionError') {
         return res.status(503).json({
@@ -81,6 +91,7 @@ app.use((err, req, res, next) => {
             message: 'Erro de conexão com o banco de dados'
         });
     }
+
     // Erro de sintaxe SQL
     if (err.name === 'SequelizeDatabaseError') {
         return res.status(500).json({
@@ -88,6 +99,7 @@ app.use((err, req, res, next) => {
             message: 'Erro interno do banco de dados'
         });
     }
+    
     // Erro genérico
     res.status(500).json({
         success: false,

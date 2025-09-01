@@ -1,13 +1,13 @@
-const userService = require("../services/userService");
+const ProductService = require("../services/ProductService");
 
-class UserController {
-    async createUser(req, res) {
+class ProductController {
+    async createProduct(req, res) {
         try {
-            const newUser = await userService.createUser(req.body);
+            const newProduct = await ProductService.createProduct(req.body);
             res.status(201).json({
                 success: true,
                 message: 'Usuário criado com sucesso',
-                data: newUser
+                data: newProduct
             });
         } catch (error) {
             res.status(400).json({
@@ -16,10 +16,10 @@ class UserController {
             });
         }
     }
-    async getAllUsers(req, res) {
+    async getAllProducts(req, res) {
         try {
             const { page, limit } = req.query;
-            const result = await userService.getAllUsers({ page, limit });
+            const result = await ProductService.getAllProducts({ page, limit });
             // Se foi paginado, retornar com metadados
             if (result.count !== undefined) {
                 const totalPages = Math.ceil(result.count / limit);
@@ -46,12 +46,12 @@ class UserController {
             });
         }
     }
-    async getUserById(req, res) {
+    async getProductById(req, res) {
         try {
-            const user = await userService.getUserById(req.params.id);
+            const product = await ProductService.getProductById(req.params.id);
             res.status(200).json({
                 success: true,
-                data: user
+                data: product
             });
         } catch (error) {
             res.status(404).json({
@@ -60,16 +60,16 @@ class UserController {
             });
         }
     }
-    async updateUser(req, res) {
+    async updateProduct(req, res) {
         try {
-            const updatedUser = await userService.updateUser(
+            const updatedProduct = await ProductService.updateProduct(
                 req.params.id,
                 req.body
             );
             res.status(200).json({
                 success: true,
                 message: 'Usuário atualizado com sucesso',
-                data: updatedUser
+                data: updatedProduct
             });
         } catch (error) {
             res.status(400).json({
@@ -78,9 +78,9 @@ class UserController {
             });
         }
     }
-    async deleteUser(req, res) {
+    async deleteProduct(req, res) {
         try {
-            const result = await userService.deleteUser(req.params.id);
+            const result = await ProductService.deleteProduct(req.params.id);
             res.status(200).json({
                 success: true,
                 message: result.message
@@ -92,9 +92,9 @@ class UserController {
             });
         }
     }
-    async getUsersCount(req, res) {
+    async getProductsCount(req, res) {
         try {
-            const count = await userService.getUsersCount();
+            const count = await ProductService.getProductsCount();
             res.status(200).json({
                 success: true,
                 data: { count }
@@ -106,7 +106,7 @@ class UserController {
             });
         }
     }
-    async searchUsers(req, res) {
+    async searchProducts(req, res) {
         try {
             const { q: searchTerm, page, limit } = req.query;
             if (!searchTerm) {
@@ -115,13 +115,13 @@ class UserController {
                     message: 'Parâmetro de busca "q" é obrigatório'
                 });
             }
-            const users = await userService.searchUsers(searchTerm, {
+            const products = await ProductService.searchProducts(searchTerm, {
                 page,
                 limit
             });
             res.status(200).json({
                 success: true,
-                data: users,
+                data: products,
                 searchTerm
             });
         } catch (error) {

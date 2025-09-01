@@ -1,5 +1,6 @@
 const Product = require('../models/Product');
 const { Op } = require('sequelize');
+
 class ProductRepository {
     async create(productData) {
         try {

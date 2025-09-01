@@ -1,8 +1,8 @@
 const productRepository = require("../repositories/productRepository");
-const { ValidationError, UniqueConstraintError } =
-    require('sequelize');
-class UserService {
-    async createUser(productData) {
+const { ValidationError, UniqueConstraintError } = require('sequelize');
+
+class ProductService {
+    async createProduct(productData) {
         try {
             // Validação básica
             if (!productData.name || !productData.email) {
@@ -28,7 +28,7 @@ class UserService {
             throw error;
         }
     }
-    async getAllUsers(options = {}) {
+    async getAllProducts(options = {}) {
         try {
             const { page, limit } = options;
             if (page && limit) {
@@ -44,7 +44,7 @@ class UserService {
                 error.message);
         }
     }
-    async getUserById(id) {
+    async getProductById(id) {
         try {
             // Validar se o ID é um número válido
             if (!id || isNaN(id)) {
@@ -63,7 +63,7 @@ class UserService {
             throw error;
         }
     }
-    async getAllUsers(options = {}) {
+    async getAllProducts(options = {}) {
         try {
             const { page, limit } = options;
             if (page && limit) {
@@ -79,13 +79,13 @@ class UserService {
                 error.message);
         }
     }
-    async getUserById(id) {
+    async getProductById(id) {
         try {
             // Validar se o ID é um número válido
             if (!id || isNaN(id)) {
                 throw new Error("ID de usuário inválido.");
             }
-            return updatedUser;
+            return updatedProduct;
         } catch (error) {
             // Tratar erros específicos do Sequelize
             if (error instanceof ValidationError) {
@@ -99,7 +99,7 @@ class UserService {
             throw error;
         }
     }
-    async deleteUser(id) {
+    async deleteProduct(id) {
         try {
             // Validar se o ID é um número válido
             if (!id || isNaN(id)) {
@@ -115,7 +115,7 @@ class UserService {
             throw error;
         }
     }
-    async getUsersCount() {
+    async getProductsCount() {
         try {
             return await productRepository.count();
         } catch (error) {
@@ -123,7 +123,7 @@ class UserService {
                 error.message);
         }
     }
-    async searchUsers(searchTerm, options = {}) {
+    async searchProducts(searchTerm, options = {}) {
         try {
             if (!searchTerm || searchTerm.trim() === '') {
                 throw new Error("Termo de busca é obrigatório.");
@@ -142,4 +142,4 @@ class UserService {
         }
     }
 }
-module.exports = new UserService();
+module.exports = new ProductService();
