@@ -6,7 +6,7 @@ class ProductController {
             const newProduct = await ProductService.createProduct(req.body);
             res.status(201).json({
                 success: true,
-                message: 'Usuário criado com sucesso',
+                message: 'Produto criado com sucesso',
                 data: newProduct
             });
         } catch (error) {
@@ -68,7 +68,7 @@ class ProductController {
             );
             res.status(200).json({
                 success: true,
-                message: 'Usuário atualizado com sucesso',
+                message: 'Produto atualizado com sucesso',
                 data: updatedProduct
             });
         } catch (error) {
@@ -132,4 +132,4 @@ class ProductController {
         }
     }
 }
-module.exports = new UserController();
+module.exports = new ProductController();

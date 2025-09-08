@@ -5,8 +5,8 @@ class ProductService {
     async createProduct(productData) {
         try {
             // Validação básica
-            if (!productData.name || !productData.email) {
-                throw new Error("Nome e email são obrigatórios.");
+            if (!productData.name) {
+                throw new Error("Nome é obrigatórios.");
             }
             // Verificar se o email já existe
             const existingProduct = await
@@ -40,7 +40,7 @@ class ProductService {
             }
             return await productRepository.findAll();
         } catch (error) {
-            throw new Error("Erro ao buscar usuários: " +
+            throw new Error("Erro ao buscar produto: " +
                 error.message);
         }
     }
@@ -48,7 +48,7 @@ class ProductService {
         try {
             // Validar se o ID é um número válido
             if (!id || isNaN(id)) {
-                throw new Error("ID de usuário inválido.");
+                throw new Error("ID de produto inválido.");
             }
         } catch (error) {
             // Tratar erros específicos do Sequelize
@@ -57,9 +57,9 @@ class ProductService {
                     err.message);
                 throw new Error(messages.join('. '));
             }
-            if (error instanceof UniqueConstraintError) {
-                throw new Error("Email já está em uso.");
-            }
+            // if (error instanceof UniqueConstraintError) {
+            //     throw new Error("Email já está em uso.");
+            // }
             throw error;
         }
     }
@@ -75,7 +75,7 @@ class ProductService {
             }
             return await productRepository.findAll();
         } catch (error) {
-            throw new Error("Erro ao buscar usuários: " +
+            throw new Error("Erro ao buscar produto: " +
                 error.message);
         }
     }
@@ -83,7 +83,7 @@ class ProductService {
         try {
             // Validar se o ID é um número válido
             if (!id || isNaN(id)) {
-                throw new Error("ID de usuário inválido.");
+                throw new Error("ID de produto inválido.");
             }
             return updatedProduct;
         } catch (error) {
@@ -93,9 +93,9 @@ class ProductService {
                     err.message);
                 throw new Error(messages.join('. '));
             }
-            if (error instanceof UniqueConstraintError) {
-                throw new Error("Email já está em uso por outro usuário.");
-}
+//             if (error instanceof UniqueConstraintError) {
+//                 throw new Error("Email já está em uso por outro usuário.");
+// }
             throw error;
         }
     }
@@ -103,14 +103,14 @@ class ProductService {
         try {
             // Validar se o ID é um número válido
             if (!id || isNaN(id)) {
-                throw new Error("ID de usuário inválido.");
+                throw new Error("ID de produto inválido.");
             }
             const deleted = await
                 productRepository.delete(parseInt(id));
             if (!deleted) {
-                throw new Error("Usuário não encontrado para exclusão.");
+                throw new Error("Produto não encontrado para exclusão.");
 }
-            return { message: "Usuário deletado com sucesso." };
+            return { message: "Produto deletado com sucesso." };
         } catch (error) {
             throw error;
         }
@@ -119,7 +119,7 @@ class ProductService {
         try {
             return await productRepository.count();
         } catch (error) {
-            throw new Error("Erro ao contar usuários: " +
+            throw new Error("Erro ao contar produtos: " +
                 error.message);
         }
     }
@@ -137,7 +137,7 @@ class ProductService {
             return await productRepository.search(searchTerm.trim(),
                 searchOptions);
         } catch (error) {
-            throw new Error("Erro ao buscar usuários: " +
+            throw new Error("Erro ao buscar produto: " +
                 error.message);
         }
     }

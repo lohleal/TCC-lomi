@@ -29,17 +29,17 @@ class ProductRepository {
             throw error;
         }
     }
-    async findByEmail(email) {
-        try {
-            return await Product.findOne({
-                where: {
-                    email: email.toLowerCase().trim()
-                }
-            });
-        } catch (error) {
-            throw error;
-        }
-    }
+    // async findByEmail(email) {
+    //     try {
+    //         return await Product.findOne({
+    //             where: {
+    //                 email: email.toLowerCase().trim()
+    //             }
+    //         });
+    //     } catch (error) {
+    //         throw error;
+    //     }
+    // }
     async update(id, updateData) {
         try {
             const [updatedRowsCount] = await Product.update(updateData,

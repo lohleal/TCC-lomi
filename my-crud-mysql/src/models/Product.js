@@ -19,34 +19,34 @@ const Product = sequelize.define('Product', {
             }
         }
     },
-    email: {
-        type: DataTypes.STRING(100),
-        allowNull: false,
-        unique: {
-            name: 'unique_email',
-            msg: 'Email já está em uso'
-        },
-        validate: {
-            notEmpty: {
-                msg: 'Email é obrigatório'
-            },
-            isEmail: {
-                msg: 'Email deve ser válido'
-            }
-        },
-        set(value) {
-            // Converter para lowercase antes de salvar
-            this.setDataValue('email', value.toLowerCase().trim());
-        }
-    }
-}, {
-    tableName: 'products',
-    timestamps: true, // Adiciona createdAt e updatedAt
-    indexes: [
-        {
-            unique: true,
-            fields: ['email']
-        }
-    ]
-});
+    // email: {
+    //     type: DataTypes.STRING(100),
+    //     allowNull: false,
+    //     unique: {
+    //         name: 'unique_email',
+    //         msg: 'Email já está em uso'
+    //     },
+    //     validate: {
+    //         notEmpty: {
+    //             msg: 'Email é obrigatório'
+    //         },
+    //         isEmail: {
+    //             msg: 'Email deve ser válido'
+    //         }
+    //     },
+    //     set(value) {
+    //         // Converter para lowercase antes de salvar
+    //         this.setDataValue('email', value.toLowerCase().trim());
+    //     }
+    // }
+}
+//     tableName: 'products',
+//     timestamps: true, // Adiciona createdAt e updatedAt
+//     indexes: [
+//         {
+//             unique: true,
+//             fields: ['email']
+//         }
+//     ]
+);
 module.exports = Product;

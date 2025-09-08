@@ -15,22 +15,22 @@ function CadastrarProduto() {
 
     const createProduct = async () => {
         try {
-            await axios.post("http://localhost:3000/api/products", {
+            await axios.post("http://localhost:3000/products", {
                 nome,
                 valor,
                 tamanho,
                 categoria,
             });
-            //alert("Produto cadastrado com sucesso!");
             setNome("");
             setValor("");
             setTamanho("");
             setCategoria("");
+            alert("Produto cadastrado com sucesso!");
         } catch (error) {
-            console.error("Erro ao cadastrar produto:", error);
-
+            console.error("Erro ao cadastrar produto:", error.response?.data || error.message);
         }
     };
+
 
     return (
         <Background>
@@ -67,7 +67,7 @@ function CadastrarProduto() {
 
                 <ContainerBotoes>
 
-                    <Botao>
+                    <Botao onClick={createProduct}>
                         <Link to="/menu principal" style={{ textDecoration: 'none', color: 'inherit' }}>
                             Voltar
                         </Link>
